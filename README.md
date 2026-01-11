@@ -1,5 +1,15 @@
 # Proiect Laborator TSS
 
+### Cuprins
+1. [Generarea datelor de test](#1-generarea-datelor-de-test)
+   - [a) Equivalence Partitioning](#a-equivalence-partitioning)
+   - [b) Boundary Value Analysis (BVA)](#b-boundary-value-analysis-bva)
+   - [c) Cause-Effect Graphing (CEG)](#c-cause-effect-graphing-ceg)
+2. [Stabilirea nivelului de acoperire al testelor](#2-stabilirea-nivelului-de-acoperire-al-testelor)
+3. [Transformarea programului într-un graf orientat și găsirea unui set de teste care satisface criteriul MC/DC](#3-transformarea-programului-într-un-graf-orientat-și-găsirea-unui-set-de-teste-care-satisface-criteriul-mcdc)
+4. [Crearea unui mutant de ordinul 1 echivalent al programului](#4-crearea-unui-mutant-de-ordinul-1-echivalent-al-programului)
+5. [Crearea unui mutant ne-echivalent omorât de către test și un mutant ne-echivalent nevăzut de către test](#5-crearea-unui-mutant-ne-echivalent-omorât-de-către-test-și-un-mutant-ne-echivalent-nevăzut-de-către-test)
+
 ### Specificații program
 
 Metoda `calculate_bonus` din clasa `BonusCalculator` calculează bonusul salarial pe baza salariului, experienței și performanței angajatului.
