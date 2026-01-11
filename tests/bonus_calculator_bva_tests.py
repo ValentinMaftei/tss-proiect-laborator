@@ -1,4 +1,3 @@
-import pytest
 from bonus_calculator import BonusCalculator
 
 def test_bva_1():
@@ -29,34 +28,25 @@ def test_bva_9():
     assert BonusCalculator.calculate_bonus(salariu=5000, experienta=4, performanta=-1) == "INVALID"
 
 def test_bva_10():
-    assert BonusCalculator.calculate_bonus(salariu=5000, experienta=4, performanta=0) == 0.0
+    assert BonusCalculator.calculate_bonus(salariu=5000, experienta=4, performanta=0) == "INVALID"
 
 def test_bva_11():
-    assert BonusCalculator.calculate_bonus(salariu=5000, experienta=3, performanta=50) == 700.0
+    assert BonusCalculator.calculate_bonus(salariu=5000, experienta=3, performanta=50) == 1200.0
 
 def test_bva_12():
     assert BonusCalculator.calculate_bonus(salariu=5000, experienta=3, performanta=49) == 0.0
 
 def test_bva_13():
-    assert BonusCalculator.calculate_bonus(salariu=5000, experienta=3, performanta=51) == 700.0
+    assert BonusCalculator.calculate_bonus(salariu=5000, experienta=3, performanta=51) == 1200.0
 
 def test_bva_14():
-    assert BonusCalculator.calculate_bonus(salariu=5000, experienta=3, performanta=70) == 1200.0
-
-def test_bva_15():
-    assert BonusCalculator.calculate_bonus(salariu=5000, experienta=3, performanta=69) == 700.0
-
-def test_bva_16():
-    assert BonusCalculator.calculate_bonus(salariu=5000, experienta=3, performanta=71) == 1200.0
-
-def test_bva_17():
     assert BonusCalculator.calculate_bonus(salariu=5000, experienta=4, performanta=90) == 1500.0
 
-def test_bva_18():
+def test_bva_15():
     assert BonusCalculator.calculate_bonus(salariu=5000, experienta=4, performanta=89) == 1350.0
 
-def test_bva_19():
+def test_bva_16():
     assert BonusCalculator.calculate_bonus(salariu=5000, experienta=4, performanta=91) == 1500.0
 
-def test_bva_20():
+def test_bva_17():
     assert BonusCalculator.calculate_bonus(salariu=5000, experienta=4, performanta=101) == "INVALID"

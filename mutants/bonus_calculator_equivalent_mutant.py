@@ -1,4 +1,4 @@
-class BonusCalculator:
+class BonusCalculatorMutant:
 
     @staticmethod
     def calculate_bonus(salariu: int, experienta: int, performanta: int) -> float | str:
@@ -22,7 +22,8 @@ class BonusCalculator:
         else:
             return 0.0
 
-        if procent_bonus > 30:
+        # Schimbarea fata de original - folosirea '>=' in loc de '>'
+        if procent_bonus >= 30:
             procent_bonus = 30
 
         bonus_total = (salariu * procent_bonus) / 100

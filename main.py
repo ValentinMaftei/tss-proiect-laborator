@@ -1,7 +1,7 @@
 from bonus_calculator import BonusCalculator
 
 def main() -> None:
-    bonus = BonusCalculator.calculate_bonus(salariu=5000, experienta=4, performanta=89)
+    bonus = BonusCalculator.calculate_bonus(salariu=0, experienta=4, performanta=80)
     print(f"Bonus calculat: {bonus}")
 
 

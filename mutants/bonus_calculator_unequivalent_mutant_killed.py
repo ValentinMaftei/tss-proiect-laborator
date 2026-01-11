@@ -1,10 +1,10 @@
-class BonusCalculator:
+class BonusCalculatorMutantKilled:
 
     @staticmethod
     def calculate_bonus(salariu: int, experienta: int, performanta: int) -> float | str:
 
         # Validare input
-        if salariu <= 0 or experienta < 0 or not (0 < performanta <= 100):
+        if salariu < 0 or experienta < 0 or not (0 < performanta <= 100):
             return "INVALID"
 
         # Bonus initial
@@ -22,6 +22,7 @@ class BonusCalculator:
         else:
             return 0.0
 
+        # Schimbarea fata de original - folosirea '>=' in loc de '>'
         if procent_bonus > 30:
             procent_bonus = 30
 

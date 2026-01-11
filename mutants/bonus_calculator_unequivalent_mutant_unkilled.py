@@ -16,7 +16,7 @@ class BonusCalculator:
 
         # Bonus pe performanta
         if performanta >= 90:
-            procent_bonus += 15
+            procent_bonus += 10 + 5
         elif 50 <= performanta < 90:
             procent_bonus += 10
         else:
