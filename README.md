@@ -331,10 +331,10 @@ incorect al bonusului (rezultat = 0.0).
 
 Un mutant ne-echivalent nevăzut de către test este unul care ar putea schimba comportamentul programului, dar 
 nu este detectat de testele existente. Pentru a ilustra acest comportament am modificat calculul procentului de bonus 
-în cazul în care performanța este peste 90. În loc de a adăuga 15%, am schimbat valoarea adăugată la `10 + 5`. 
+în cazul în care performanța este peste 90. În loc de a adăuga 15%, am schimbat valoarea adăugată la `10 - 5`. 
 
 Tipul mutației: **Arithmetic Operator Replacement (AOR)**
-Test care nu omoară mutantul: orice test cu performanța peste 90.
+Test care nu omoară mutantul: orice test cu performanța sub 90.
 
 ```python
 # Versiune originală
@@ -343,5 +343,5 @@ if performanta > 90:
 
 # Mutant ne-echivalent nevăzut de către test
 if performanta > 90:
-    procent_bonus += 10 + 5
+    procent_bonus += 10 - 5
 ```
