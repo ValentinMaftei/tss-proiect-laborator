@@ -5,7 +5,7 @@ class BonusCalculator:
 
         # Validare input
         if salariu <= 0 or experienta < 0 or not (0 < performanta <= 100):
-            return "INVALID"
+            return "INCORECT"
 
         # Bonus initial
         procent_bonus = 5
@@ -16,7 +16,7 @@ class BonusCalculator:
 
         # Bonus pe performanta
         if performanta >= 90:
-            procent_bonus += 10 + 5
+            procent_bonus += 15
         elif 50 <= performanta < 90:
             procent_bonus += 10
         else:
